@@ -11,7 +11,7 @@
  * @type {comparator<Number>}
  */
 function numeroAmenorQueNumeroB(a,b){
-    //TODO
+    return a < b
 }
 
 /**
@@ -23,7 +23,23 @@ function numeroAmenorQueNumeroB(a,b){
  * @returns {Number} - Indice do elemento a mover
  */
 function seguinteElementoAmover(lista, comparador) {
-    //TODO
+    let valorMinimo = lista [0]
+    let posicion = 0
+
+    for (let i=1; i < lista.length; i++) {
+
+        let resultComparación = comparador(valorMinimo, lista[i])
+
+            if (resultComparación) {
+                valorMinimo = valorMinimo
+                posicion = posicion
+            } else {
+                valorMinimo = lista[i]
+                posicion = i
+            } 
+            
+    }
+    return posicion
 }
 
 /**
