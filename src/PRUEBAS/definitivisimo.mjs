@@ -53,3 +53,4 @@ function ordenarElementos (lista, comparador, selectorElementoAmover) {
 let datosOrdenados = ordenarElementos(datos, numeroAmenorQueNumeroB, seguinteElementoAmover)
 
 console.log (datosOrdenados)
+console.table(datosOrdenados)
