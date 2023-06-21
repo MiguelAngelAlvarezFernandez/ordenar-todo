@@ -28,9 +28,9 @@ function seguinteElementoAmover(lista, comparador) {
 
     for (let i=1; i < lista.length; i++) {
 
-        let resultComparación = comparador(valorMinimo, lista[i])
+        let resultComparacion = comparador(valorMinimo, lista[i])
 
-            if (resultComparación) {
+            if (resultComparacion) {
                 valorMinimo = valorMinimo
                 posicion = posicion
             } else {
@@ -51,8 +51,18 @@ function seguinteElementoAmover(lista, comparador) {
  * @param {comparator<T>} comparador - Funcion comparadora de elementos
  * @returns {T[]} - Array con elementos ordenados
  */
-function ordenarElementos(lista, selectorElementoAmover, comparador){
-    //TODO
+
+function ordenarElementos(lista, selectorElementoAmover, comparador){ 
+
+    let arrayOrdenado = [] 
+
+    while (lista.length) {
+        let elementoAMover = selectorElementoAmover (lista, comparador) 
+        arrayOrdenado.push(lista[elementoAMover])
+        lista.splice (elementoAMover, 1)
+    }
+    
+   return arrayOrdenado
 }
 
 export {
